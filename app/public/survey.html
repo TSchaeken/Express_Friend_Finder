@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="/assets/style.css">
+</head>
+
+<body>
+
+    <div class="jumbotron">
+        <h1 class="display-4 text-center">Time to find your special one!</h1>
+        <p class="lead text-center">Rate the following questions for how well the align with you from 0 (This is not me) to 5(This is so me)
+        </p>
+    </div>
+    <div id="question-form">
+        <form action="/api/formsubmit" method="POST" class="container">
+            <div class="container">
+                <div class="container question-container">
+                    I don't enjoy taking long walks on the beach.
+                </div>
+                <div class="container answer-container">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question1" id="inlineRadio" value=0>
+                        <label class="form-check-label" for="inlineRadio1">0</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question1" id="inlineRadio1" value=1>
+                        <label class="form-check-label" for="inlineRadio1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question1" id="inlineRadio2" value=2>
+                        <label class="form-check-label" for="inlineRadio2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question1" id="inlineRadio3" value=3>
+                        <label class="form-check-label" for="inlineRadio2">3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question1" id="inlineRadio4" value=4>
+                        <label class="form-check-label" for="inlineRadio2">4</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question1" id="inlineRadio5" value=5>
+                        <label class="form-check-label" for="inlineRadio2">5</label>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="container question-container">
+                    Pie tastes better than cake.
+                </div>
+                <div class="container answer-container">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question2" id="inlineRadio" value="0">
+                        <label class="form-check-label" for="inlineRadio1">0</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question2" id="inlineRadio1" value=1>
+                        <label class="form-check-label" for="inlineRadio1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question2" id="inlineRadio2" value="2">
+                        <label class="form-check-label" for="inlineRadio2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question2" id="inlineRadio3" value="3">
+                        <label class="form-check-label" for="inlineRadio2">3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question2" id="inlineRadio4" value="4">
+                        <label class="form-check-label" for="inlineRadio2">4</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question2" id="inlineRadio5" value="5">
+                        <label class="form-check-label" for="inlineRadio2">5</label>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="container question-container">
+                    Coffee is an essential part of my day.
+                </div>
+                <div class="container answer-container">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question3" id="inlineRadio" value="0">
+                        <label class="form-check-label" for="inlineRadio1">0</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question3" id="inlineRadio1" value="1">
+                        <label class="form-check-label" for="inlineRadio1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question3" id="inlineRadio2" value="2">
+                        <label class="form-check-label" for="inlineRadio2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question3" id="inlineRadio3" value="3">
+                        <label class="form-check-label" for="inlineRadio2">3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question3" id="inlineRadio4" value="4">
+                        <label class="form-check-label" for="inlineRadio2">4</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question3" id="inlineRadio5" value="5">
+                        <label class="form-check-label" for="inlineRadio2">5</label>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="container question-container">
+                    I consider myself more of a morning person.
+                </div>
+                <div class="container answer-container">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question4" id="inlineRadio" value="0">
+                        <label class="form-check-label" for="inlineRadio1">0</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question4" id="inlineRadio1" value="1">
+                        <label class="form-check-label" for="inlineRadio1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question4" id="inlineRadio2" value="2">
+                        <label class="form-check-label" for="inlineRadio2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question4" id="inlineRadio3" value="3">
+                        <label class="form-check-label" for="inlineRadio2">3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question4" id="inlineRadio4" value="4">
+                        <label class="form-check-label" for="inlineRadio2">4</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question4" id="inlineRadio5" value="5">
+                        <label class="form-check-label" for="inlineRadio2">5</label>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="container question-container">
+                    I regularly excercise.
+                </div>
+                <div class="container answer-container">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question5" id="inlineRadio" value="0">
+                        <label class="form-check-label" for="inlineRadio1">0</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question5" id="inlineRadio1" value="1">
+                        <label class="form-check-label" for="inlineRadio1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question5" id="inlineRadio2" value="2">
+                        <label class="form-check-label" for="inlineRadio2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question5" id="inlineRadio3" value="3">
+                        <label class="form-check-label" for="inlineRadio2">3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question5" id="inlineRadio4" value="4">
+                        <label class="form-check-label" for="inlineRadio2">4</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question5" id="inlineRadio5" value="5">
+                        <label class="form-check-label" for="inlineRadio2">5</label>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="container question-container">
+                    Seriously pie is better than cake.
+                </div>
+                <div class="container answer-container">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question6" id="inlineRadio" value="0">
+                        <label class="form-check-label" for="inlineRadio1">0</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question6" id="inlineRadio1" value="1">
+                        <label class="form-check-label" for="inlineRadio1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question6" id="inlineRadio2" value="2">
+                        <label class="form-check-label" for="inlineRadio2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question6" id="inlineRadio3" value="3">
+                        <label class="form-check-label" for="inlineRadio2">3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question6" id="inlineRadio4" value="4">
+                        <label class="form-check-label" for="inlineRadio2">4</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question6" id="inlineRadio5" value="5">
+                        <label class="form-check-label" for="inlineRadio2">5</label>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="container question-container">
+                    I prefer binge-watching tv shows instead of one episode at a time.
+                </div>
+                <div class="container answer-container">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question7" id="inlineRadio" value="0">
+                        <label class="form-check-label" for="inlineRadio1">0</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question7" id="inlineRadio1" value="1">
+                        <label class="form-check-label" for="inlineRadio1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question7" id="inlineRadio2" value="2">
+                        <label class="form-check-label" for="inlineRadio2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question7" id="inlineRadio3" value="3">
+                        <label class="form-check-label" for="inlineRadio2">3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question7" id="inlineRadio4" value="4">
+                        <label class="form-check-label" for="inlineRadio2">4</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question7" id="inlineRadio5" value="5">
+                        <label class="form-check-label" for="inlineRadio2">5</label>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="container question-container">
+                    I prefer warm to cold.
+                </div>
+                <div class="container answer-container">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question8" id="inlineRadio" value="0">
+                        <label class="form-check-label" for="inlineRadio1">0</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question8" id="inlineRadio1" value="1">
+                        <label class="form-check-label" for="inlineRadio1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question8" id="inlineRadio2" value="2">
+                        <label class="form-check-label" for="inlineRadio2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question8" id="inlineRadio3" value="3">
+                        <label class="form-check-label" for="inlineRadio2">3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question8" id="inlineRadio4" value="4">
+                        <label class="form-check-label" for="inlineRadio2">4</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question8" id="inlineRadio5" value="5">
+                        <label class="form-check-label" for="inlineRadio2">5</label>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="container question-container">
+                    I consider myself interesting.
+                </div>
+                <div class="container answer-container">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question9" id="inlineRadio" value="0">
+                        <label class="form-check-label" for="inlineRadio1">0</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question9" id="inlineRadio1" value="1">
+                        <label class="form-check-label" for="inlineRadio1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question9" id="inlineRadio2" value="2">
+                        <label class="form-check-label" for="inlineRadio2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question9" id="inlineRadio3" value="3">
+                        <label class="form-check-label" for="inlineRadio2">3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question9" id="inlineRadio4" value="4">
+                        <label class="form-check-label" for="inlineRadio2">4</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question9" id="inlineRadio5" value="5">
+                        <label class="form-check-label" for="inlineRadio2">5</label>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="container question-container">
+                    I am close with my family.
+                </div>
+                <div class="container answer-container">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question10" id="inlineRadio" value="0">
+                        <label class="form-check-label" for="inlineRadio1">0</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question10" id="inlineRadio1" value="1">
+                        <label class="form-check-label" for="inlineRadio1">1</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question10" id="inlineRadio2" value="2">
+                        <label class="form-check-label" for="inlineRadio2">2</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question10" id="inlineRadio3" value="3">
+                        <label class="form-check-label" for="inlineRadio2">3</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question10" id="inlineRadio4" value="4">
+                        <label class="form-check-label" for="inlineRadio2">4</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="Question10" id="inlineRadio5" value="5">
+                        <label class="form-check-label" for="inlineRadio2">5</label>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-shift">Submit</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
