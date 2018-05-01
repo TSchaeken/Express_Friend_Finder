@@ -333,8 +333,23 @@
             <button type="submit" class="btn btn-primary btn-shift" id="fuckass">Submit</button>
         </form>
     </div>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+
+    <div class="modal fade" id="getCodeModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel"> FRIENDS AT FIRST SIGHT </h4>
+                </div>
+                <div class="modal-body" id="getCode" style="overflow-x: scroll;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
@@ -342,7 +357,28 @@
 
     <script>
         $('#fuckass').click(function (e) {
-            console.log($("input[name='Question10']:checked").val());
+            e.preventDefault();
+            var answers = {
+                Q1: $("input[name='Question1']:checked").val(),
+                Q2: $("input[name='Question2']:checked").val(),
+                Q3: $("input[name='Question3']:checked").val(),
+                Q4: $("input[name='Question4']:checked").val(),
+                Q5: $("input[name='Question5']:checked").val(),
+                Q6: $("input[name='Question6']:checked").val(),
+                Q7: $("input[name='Question7']:checked").val(),
+                Q8: $("input[name='Question8']:checked").val(),
+                Q9: $("input[name='Question9']:checked").val(),
+                Q10: $("input[name='Question10']:checked").val()
+            };
+
+            $.post("/api/submit", answers).then(function (data) {
+                console.log(data)
+                $("#getCodeModal").modal("toggle");
+                $("#getCode").html(`<p>Looks like you matched with ${data.name}!</p>
+                <p> You two are going to be great friends!</p>
+                <p>Your answers were only ${data.differential} points apart!</p>
+                ${data.name} describes themselves as: ${data.description}`);
+            })
         })
     </script>
 </body>

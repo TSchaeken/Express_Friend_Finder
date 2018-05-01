@@ -5,7 +5,7 @@ module.exports = function(app) {
     res.json(logg.friends);
   });
 
-  app.post('/api/formsubmit', function(req, res) {
+  app.post('/api/submit', function(req, res) {
     let arr = Object.values(req.body);
     res.json(logg.comparison(arr));
   });
